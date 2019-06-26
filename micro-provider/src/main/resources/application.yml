@@ -1,0 +1,24 @@
+server:
+  # 指定Tomcat端口
+  port: 7901
+
+logging:
+  home: logs
+  level:
+    root: info
+
+spring:
+  application:
+    # 指定注册到eureka server上的服务名称，对于电影微服务，本系列将名称设为microservice-consumer-movie
+    name: micro-provider
+    security:
+      user:
+        name: user                # 配置登录的账号是user
+        password: 123     # 配置登录的密码是password123
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5 #eureka client刷新本地缓存时间，默认30
+    service-url:
+      # 指定eureka server通信地址，注意/eureka/小尾巴不能少
+      defaultZone: http://user:123@localhost:8761/eureka
+
