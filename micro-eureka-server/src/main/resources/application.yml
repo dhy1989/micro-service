@@ -19,5 +19,14 @@ eureka:
       fetch-registry: false
       serviceUrl:
         defaultZone: http://user:123@localhost:8761/eureka
-
-
+   #自我保护模式
+  server:
+    enable-self-preservation: true
+    #踢掉服务间隔
+    eviction-interval-timer-in-ms: 10000
+    #阈值更新的时间间隔，单位为毫秒，默认为15 * 60 * 1000
+    renewal-threshold-update-interval-ms: 900000
+    #阈值因子，默认是0.85，如果阈值比最小值大，则自我保护模式开启
+    renewal-percent-threshold: 0.85
+    #清理任务程序被唤醒的时间间隔，清理过期的增量信息，单位为毫秒，默认为30 * 1000
+    delta-retention-timer-interval-in-ms: 20000

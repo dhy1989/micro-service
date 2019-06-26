@@ -1,5 +1,5 @@
 server:
-  port: 8002
+  port: 8005
 eureka:
   client:
     service-url:
@@ -11,5 +11,5 @@ eureka:
 spring:
   application:
     # 指定注册到eureka server上的服务名称，对于电影微服务，本系列将名称设为microservice-consumer-movie
-    name: micro-consumer
+    name: micro-consumer-ribbon
 
