@@ -13,3 +13,6 @@ spring:
     # 指定注册到eureka server上的服务名称，对于电影微服务，本系列将名称设为microservice-consumer-movie
     name: micro-consumer-ribbon
 
+micro-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
