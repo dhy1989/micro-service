@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author dinghy
  * @date 2019/6/27 15:56
  */
-@FeignClient("micro-provider")
+@FeignClient(name="micro-provider")
 public interface UserFeignClient {
 
     @RequestMapping(value = "/user/{id}",method = RequestMethod.GET)
