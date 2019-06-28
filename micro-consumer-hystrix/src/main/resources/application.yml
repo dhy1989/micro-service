@@ -19,8 +19,13 @@ eureka:
 spring:
   application:
     # 指定注册到eureka server上的服务名称，对于电影微服务，本系列将名称设为microservice-consumer-movie
-    name: micro-consumer
+    name: micro-consumer-hystrix
 management:
   endpoint:
     health:
       show-details: always
+logging:
+  file: ${spring.application.name}/logs/app.log
+  level:
+     com.demo: debug
+  root: info
