@@ -13,6 +13,8 @@
         <module>micro-eureka-server</module>
 		<module>micro-eureka-server-ha</module>
 		<module>micro-consumer-ribbon</module>
+		<module>micro-consumer-feign</module>
+        <module>micro-consumer-hystrix</module>			
     </modules>
     <packaging>pom</packaging>
     <parent>

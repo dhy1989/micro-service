@@ -14,7 +14,16 @@ spring:
     security:
       user:
         name: user                # 配置登录的账号是user
-        password: 123     # 配置登录的密码是password123
+        password: 123   # 配置登录的密码是password123
+  redis:
+    database: 1
+    host: 192.168.65.100
+    port: 6379
+  session:
+    store-type: redis
+    redis:
+      flush-mode: on_save
+
 eureka:
   client:
     registry-fetch-interval-seconds: 5 #eureka client刷新本地缓存时间，默认30
